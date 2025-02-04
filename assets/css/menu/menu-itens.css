@@ -1,0 +1,10 @@
+.menu-itens{
+  list-style:none; /*tirar os pontos do lado da lista*/
+}
+.menu-itens:last-child{
+  margin-right:0;
+}
+.menu-itens:hover{
+  text-decoration: underline;
+}
+

@@ -1,0 +1,44 @@
+.quemsomos{
+padding: 5rem;
+
+}
+
+.titulo{
+  text-align:center;
+  font-family: Pacifico,cursive;
+  color:#8d0606;
+  font-size: 3.0625rem;
+}
+
+.sub-titulo{
+text-align: center;
+color: #8c8787;
+font-size:1.75rem;
+font-weight:400;
+}
+
+.inicio{
+  margin-bottom: 5rem;
+}
+
+.donas{
+  display:inline-block;
+  text-align: center;
+  margin-left:5rem;
+  }
+
+.Nome{
+  font-family: Pacifico,cursive;
+  color:#8d0606;
+  font-size: 2rem;
+}
+
+.descrição{
+  color: #8c8787;
+  font-size:1.3rem;
+  font-weight:400;
+}
+
+.pessoas{
+border-radius:100%;
+}

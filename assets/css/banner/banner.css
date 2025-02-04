@@ -1,0 +1,45 @@
+.banner{
+  position:relative;
+}
+
+.banner-imagem{
+  width:100%;
+  height: calc(100vh - 75px);
+}
+
+.banner-titulo{
+  font-family: Pacifico,cursive;
+  color: #FDFDFD;
+  font-size: 5.0625rem;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50% , -50%);
+  text-align:center;
+  width:100%;
+  text-shadow: 0 20px 4px rgba(0,0,0,0.5);
+}
+
+@media(max-width:500px){
+  .banner{
+    position:relative;
+  }
+  
+  .banner-imagem{
+    width:100%;
+    height: calc(100vh - 100px);
+  }
+  
+  .banner-titulo{
+    font-family: Pacifico,cursive;
+    color: #FDFDFD;
+    font-size: 5.0625rem;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50% , -50%);
+    text-align:center;
+    width:100%;
+    text-shadow: 0 20px 4px rgba(0,0,0,0.5);
+  }
+}
