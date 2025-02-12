@@ -1,5 +1,5 @@
 import { ReceitaEntity } from "../entities/Receita";
-import { Receita } from "../interfaces/Receita";
+import { Receita } from "../interfaces/IReceita";
 import { AppDataSource } from "../database/dataSource";
 
 export class ReceitaRepository{

@@ -1,16 +1,17 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+import { Passo } from '../interfaces/IReceita';
 
-@Entity("receitas")
-export class ReceitaEntity{
-    @PrimaryGeneratedColumn("increment")
-    id:number;
+@Entity('receitas')
+export class Receita {
+    @PrimaryGeneratedColumn()
+    id: number;
 
-    @Column("varchar", {nullable:false, length:100})
-    titulo:string;
+    @Column()
+    titulo: string;
 
-    @Column("varchar", {nullable:false})
-    passos:string[];
+    @Column('simple-json')
+    passo: Passo[];
 
-    @Column("varchar", {nullable:false})
-    imagemUrl:string
+    @Column()
+    imagemUrl: string;
 }
