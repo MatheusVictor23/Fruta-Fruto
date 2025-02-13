@@ -22,7 +22,7 @@ export class ReceitaTable1739321101145 implements MigrationInterface {
                     },
                     {
                         name: 'passo',
-                        type: 'json',  // Alterado para JSON para suportar objetos complexos
+                        type: 'json', 
                         isNullable: false
                     },
                     {

@@ -3,10 +3,10 @@ export type Passo = {
     passos: string[],
 };
 
-export interface Receita {
+export interface IReceita {
     id?: number,
     titulo:string,
-    passos:Passo[],
+    passo:Passo[],
     imagemUrl:string 
 }
 

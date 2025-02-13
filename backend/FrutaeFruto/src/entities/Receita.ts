@@ -6,12 +6,12 @@ export class Receita {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
+    @Column("varchar", {length:100})
     titulo: string;
 
-    @Column('simple-json')
+    @Column("json")
     passo: Passo[];
 
-    @Column()
+    @Column("varchar", {length:100})
     imagemUrl: string;
 }

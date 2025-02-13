@@ -1,7 +1,8 @@
 import 'reflect-metadata';
 import { DataSource } from "typeorm";
-import { ReceitaEntity } from "../entities/Receita";
+import { Receita } from "../entities/Receita";
 import { ReceitaTable1739321101145 } from './migrations/1739325066059-updateReceitaTable';
+import { ReceitaSeeders1739323418099 } from './migrations/1739323418099-ReceitaSeeders';
 export const AppDataSource = new DataSource({
     type: "mysql",
     host:"localhost",
@@ -9,7 +10,7 @@ export const AppDataSource = new DataSource({
     password:"root",
     database:"frutoefruta",
     synchronize: true,
-    entities: [ReceitaEntity],
-    migrations: [ReceitaTable1739321101145],
+    entities: [Receita],
+    migrations: [ReceitaTable1739321101145,ReceitaSeeders1739323418099],
     subscribers: []
 })
