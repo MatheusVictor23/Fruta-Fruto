@@ -28,7 +28,7 @@ export class ReceitaTable1739321101145 implements MigrationInterface {
                     {
                         name: 'imagemUrl',
                         type: 'varchar',
-                        length: '150',
+                        length: '100',
                         isNullable: false
                     }
                 ]

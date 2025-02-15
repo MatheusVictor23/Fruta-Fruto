@@ -35,6 +35,7 @@ const receitas:IReceita[] = [
         ],
         imagemUrl: "string"
     },
+    
     {
         titulo: "Tigela de kiwi",
         passo: [
@@ -112,7 +113,7 @@ const receitas:IReceita[] = [
         ],
         imagemUrl: "string"
     },
-    { 
+    {
         titulo: "Pimentões à Juliana",
         passo: [
             {
@@ -180,7 +181,8 @@ const receitas:IReceita[] = [
             }
         ],
         imagemUrl: "string"
-    }
+    },
+    
 ]
 
 

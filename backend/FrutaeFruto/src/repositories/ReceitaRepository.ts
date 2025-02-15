@@ -1,6 +1,7 @@
 import { Receita} from "../entities/Receita";
 import { IReceita } from "../interfaces/IReceita";
 import { AppDataSource } from "../database/dataSource";
+import ErrorExtension from "../utils/ErrorExtension";
 
 export class ReceitaRepository{
     private static receitaRepository = AppDataSource.getRepository(Receita); //repositório espelhado na entidade Receita
@@ -8,16 +9,21 @@ export class ReceitaRepository{
     static async getReceitas():Promise<IReceita[]>{
         //SELECT * FROM receitas
         console.log(this.receitaRepository.find());
-        return this.receitaRepository.find();
+        return await this.receitaRepository.find();
     }
 
     static async getReceita(id:number):Promise<IReceita | null>{
-        const receita = this.receitaRepository.findOneBy({id});
+        const receita = await this.receitaRepository.findOneBy({id});
+
+        if(!receita){
+            throw new ErrorExtension(404, "Receita não encontrada!");
+        }
+
         return receita;
     } 
 
     static async newReceita(receita:IReceita):Promise<IReceita>{
-        const receitaNova = this.receitaRepository.save(receita);
+        const receitaNova = await this.receitaRepository.save(receita);
         return receitaNova;
     }
 
@@ -25,7 +31,7 @@ export class ReceitaRepository{
         const receitaExistente = await this.receitaRepository.findOneBy({ id });
 
         if (!receitaExistente) {
-            throw new Error('Receita não encontrada');
+            throw new ErrorExtension(404,'Receita não encontrada');
         }
     
         await this.receitaRepository.update(id, receita);

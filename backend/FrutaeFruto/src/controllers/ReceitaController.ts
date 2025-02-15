@@ -24,7 +24,8 @@ class ReceitaController{
 
     private async getReceita(req:Request, res:Response){
         const id = parseInt(req.params.id);
-        const receita = ReceitaRepository.getReceita(id);
+        const receita = await ReceitaRepository.getReceita(id);
+
         res.status(200).json(receita);
     }
 
@@ -35,13 +36,13 @@ class ReceitaController{
 
     private async updateReceita(req:Request, res:Response){
         const id = parseInt(req.params.id);
-        const receitaUpdated = ReceitaRepository.updateReceita(id, req.body);
+        const receitaUpdated = await ReceitaRepository.updateReceita(id, req.body);
         res.status(200).json(receitaUpdated);
     }
 
     private async deleteReceita(req:Request, res:Response){
         const id = parseInt(req.params.id);
-        const receitaDeleted = ReceitaRepository.deleteReceita(id);
+        const receitaDeleted = await ReceitaRepository.deleteReceita(id);
         res.status(200).json({message: receitaDeleted})
     }
 }
