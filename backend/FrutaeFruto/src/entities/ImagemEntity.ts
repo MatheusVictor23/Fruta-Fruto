@@ -6,5 +6,8 @@ export class ImagemEntity {
     id:number;
 
     @Column("varchar",{length:100})
+    titulo:string;
+
+    @Column("varchar",{length:100})
     url:string
 }
