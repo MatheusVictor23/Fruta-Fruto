@@ -1,4 +1,4 @@
 export default interface Imagem {
-    id:number,
+    id?:number,
     url: string
 }

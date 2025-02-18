@@ -1,9 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
-import { Passo } from '../interfaces/IReceita';
+import {Passo} from "../interfaces/IReceita";
 
 @Entity('receitas')
 export class Receita {
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn("increment")
     id: number;
 
     @Column("varchar", {length:100})

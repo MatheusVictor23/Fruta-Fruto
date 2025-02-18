@@ -1,4 +1,4 @@
-import { IReceita } from "../../interfaces/IReceita";
+import {IReceita}  from "../../interfaces/IReceita";
 
 
 const receitas:IReceita[] = [
