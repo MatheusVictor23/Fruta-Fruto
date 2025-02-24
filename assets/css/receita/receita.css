@@ -36,8 +36,10 @@
     height:20px;
     padding: 5px;
     border-style:none;
+    border-radius: 3px;
+    cursor: pointer;
     color: white;
-    background-color: #800505;
+    background-color: #8d0606;
 }
 
 .Screen_title{
