@@ -42,7 +42,7 @@
                 <div class="receita__conteudo">
                     <h4 class="receita__titulo" id="abacate">Tigela de abacate</h4>
                     <p class="receita__descricao">Receita refrescante e cheia de vitaminas para seu café da manhã.</p>
-                    <button id="receita_abacate" class="receita__botao" onclick="verReceita(1)">Ver receita</button>
+                    <button id="receita_abacate" class="receita__botao" onclick="verReceita(0)">Ver receita</button>
                 </div>
             </div>
             <div class="receita">
@@ -50,7 +50,7 @@
                 <div class="receita__conteudo">
                     <h4 class="receita__titulo" id="kiwi">Salada de kiwi</h4>
                     <p class="receita__descricao">Receita refrescante e cheia de vitaminas para seu café da manhã.</p>
-                    <button id="receita_kiwi" class="receita__botao" onclick="verReceita(2)">Ver receita</button>
+                    <button id="receita_kiwi" class="receita__botao" onclick="verReceita(1)">Ver receita</button>
                 </div>
             </div>
             <div class="receita">
@@ -58,7 +58,7 @@
                 <div class="receita__conteudo">
                     <h4 class="receita__titulo" id="vegetais">Mix de vegetais</h4>
                     <p class="receita__descricao">Receita refrescante e cheia de vitaminas para seu café da manhã.</p>
-                    <button id="receita_vegetais" class="receita__botao" onclick="verReceita(3)">Ver receita</button>
+                    <button id="receita_vegetais" class="receita__botao" onclick="verReceita(2)">Ver receita</button>
                 </div>
             </div>
             <div class="receita">
@@ -66,7 +66,7 @@
                 <div class="receita__conteudo">
                     <h4 class="receita__titulo" id="pimentoes">Pimentões à Juliana</h4>
                     <p class="receita__descricao">Receita refrescante e cheia de vitaminas para seu café da manhã.</p>
-                    <button id="receita_pimentoes" class="receita__botao" onclick="verReceita(4)">Ver receita</button>
+                    <button id="receita_pimentoes" class="receita__botao" onclick="verReceita(3)">Ver receita</button>
                 </div>
             </div>
             <div class="receita">
@@ -74,7 +74,7 @@
                 <div class="receita__conteudo">
                     <h4 class="receita__titulo" id="oriental">Prato oriental</h4>
                     <p class="receita__descricao">Receita refrescante e cheia de vitaminas para seu café da manhã.</p>
-                    <button id="receita_oriental" class="receita__botao" onclick="verReceita(5)">Ver receita</button>
+                    <button id="receita_oriental" class="receita__botao" onclick="verReceita(4)">Ver receita</button>
                 </div>
             </div>
             <div class="receita">
@@ -82,7 +82,7 @@
                 <div class="receita__conteudo">
                     <h4 class="receita__titulo" id="beterrabas">Beterrabas assadas</h4>
                     <p class="receita__descricao">Receita refrescante e cheia de vitaminas para seu café da manhã.</p>
-                    <button id="receita_beterrabas" class="receita__botao" onclick="verReceita(6)">Ver receita</button>
+                    <button id="receita_beterrabas" class="receita__botao" onclick="verReceita(5)">Ver receita</button>
                 </div>
             </div>
         </section>
@@ -113,6 +113,10 @@
             Contato: matheuszaya@gmail.com
         </footer>
 
-        <script src="index.js"></script>
+        <script src="index.js">
+            fetch("https://fruta-fruto-api-1.onrender.com/api/receitas")
+            .then(() => console.log("API iniciada!"))
+            .catch(() => console.log("Erro ao acordar a API"));
+        </script>
     </body>
 </html>

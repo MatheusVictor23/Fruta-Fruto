@@ -1,3 +1,17 @@
+let receitas = [];
+
+async function Loadreceitas(){
+    try{
+        const response = await fetch(`https://fruta-fruto-api-1.onrender.com/api/receitas/`);
+        receitas = await response.json();
+
+    }catch(error){
+        console.log("Erro: ", error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", Loadreceitas);
+
 let screen_title = (titleContent) => {
     let div = document.createElement("div");
     div.classList.add("div_screen_title");
@@ -58,11 +72,10 @@ let closeButton = (receita_screen) => {
     return div;
 }
 
+
 async function verReceita(id){
     try{
-        const response = await fetch(`https://fruta-fruto-api-1.onrender.com/api/receitas/${id}`);
-        
-        const receita = await response.json();
+        const receita = receitas[id];
         
         let receita_screen = document.createElement("div");
         let close_button = closeButton(receita_screen);
